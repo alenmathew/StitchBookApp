@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StitchBookApp.SummaryPage"
+             Title="SummaryPage" BackgroundColor="#FFFFFF" NavigationPage.HasNavigationBar="False">
+    
+    <VerticalStackLayout  Margin="30,0,30,30" >
+
+
+        <Label Grid.Row="0" TextColor="LightGray" 
+    Margin="0,40,0,0"
+Text="Summary"
+FontSize="40"
+FontAttributes="Bold"
+VerticalOptions="StartAndExpand"
+HorizontalOptions="StartAndExpand"/>
+
+        <Label TextColor="Black" VerticalOptions="StartAndExpand" x:Name="DateRangeLabel" Margin="0,10,0,0"
+FontSize="22"/>
+
+        <Label TextColor="Black" VerticalOptions="StartAndExpand" x:Name="TotalIncome" Margin="0,10,0,0"
+       FontSize="22"/>
+
+        <Label TextColor="Black" VerticalOptions="StartAndExpand" x:Name="PendingAmount" Margin="0,10,0,0"
+       FontSize="22"/>
+
+        <Label TextColor="Black" VerticalOptions="StartAndExpand" x:Name="ReceivedAmount" Margin="0,10,0,0"
+       FontSize="22"/>
+
+        <Label x:Name="MonthlyIncomeLabel"
+       FontSize="22"
+       TextColor="Black"
+       Margin="0,10,0,0"/>
+
+        <Label x:Name="MonthlyExpenseLabel"
+       FontSize="22"
+       TextColor="Black"
+       Margin="0,10,0,0"/>
+
+        <Label VerticalOptions="StartAndExpand" Margin="0,10,0,0"
+    x:Name="ProfitLabel"
+    FontSize="22"
+    TextColor="#2F9E9E"/>
+
+        <Label x:Name="TotalOrdersLabel"
+       FontSize="22"
+       TextColor="Black"
+       Margin="0,10,0,0"/>
+
+    </VerticalStackLayout>
+    
+</ContentPage>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StitchBookApp.AddExpensePage"
+             Title="AddExpensePage" BackgroundColor="#FFFFFF" NavigationPage.HasNavigationBar="False">
+    <VerticalStackLayout Padding="20" Spacing="0">
+        <Label TextColor="LightGray" 
+    Margin="0,20,0,0"
+Text="Add Expense"
+FontSize="40"
+FontAttributes="Bold"
+VerticalOptions="StartAndExpand"
+HorizontalOptions="StartAndExpand"/>
+
+
+        <Label TextColor="Black"  Margin="0,15,0,0" Text="Expense Name" FontSize="16" FontAttributes="None" />
+        <Border  Margin="0,0,0,0"
+    Stroke="#2F9E9E"
+    StrokeThickness="1"
+    StrokeShape="RoundRectangle 10"
+    Padding="0"
+    BackgroundColor="Transparent">
+
+            <Entry  Margin="0,0,0,0" Background="Transparent" TextColor="#2F9E9E" BackgroundColor="LightCyan" PlaceholderColor="Gray"  FontSize="18" x:Name="Title"
+Placeholder="Type Expense Name (Rent, Salary)"/>
+
+        </Border>
+
+
+        <Label TextColor="Black"  Margin="0,15,0,0" Text="Amount" FontSize="16" FontAttributes="None" />
+        <Border  Margin="0,0,0,0"
+    Stroke="#2F9E9E"
+    StrokeThickness="1"
+    StrokeShape="RoundRectangle 10"
+    Padding="0"
+    BackgroundColor="Transparent">
+
+            <Entry  Margin="0,0,0,0" Background="Transparent" Keyboard="Numeric" TextColor="#2F9E9E" BackgroundColor="LightCyan" PlaceholderColor="Gray"  FontSize="18" x:Name="Amount"
+Placeholder="Type Amount"/>
+
+        </Border>
+
+        <Label TextColor="Black"  Margin="0,15,0,0" Text="Category" FontSize="16" FontAttributes="None" />
+        <Border  Margin="0,0,0,0"
+    Stroke="#2F9E9E"
+    StrokeThickness="1"
+    StrokeShape="RoundRectangle 10"
+    Padding="0"
+    BackgroundColor="Transparent">
+
+            <Picker  Margin="0,0,0,0" TextColor="#2F9E9E" TitleColor="Gray"  FontSize="18" Title="Select Category" x:Name="Category">
+                <Picker.Items>
+                    <x:String>Staff</x:String>
+                    <x:String>Electricity</x:String>
+                    <x:String>Rent</x:String>
+                    <x:String>Materials</x:String>
+                </Picker.Items>
+            </Picker>
+
+        </Border>
+
+        <Label TextColor="Black"  Margin="0,20,0,0" Text="Expense Date" FontSize="16" FontAttributes="None" />
+        <Border  Margin="0,0,0,0"
+Stroke="#2F9E9E"
+StrokeThickness="1"
+StrokeShape="RoundRectangle 10"
+Padding="0"
+BackgroundColor="Transparent">
+
+            <DatePicker Margin="0,0,0,0"  TextColor="#2F9E9E"  FontSize="18" x:Name="ExpenseDate"/>
+
+        </Border>
+
+        <StackLayout  VerticalOptions="EndAndExpand" Margin="0,20,0,0">
+            <Button Text="Save Expense"  BackgroundColor="#008080" FontAttributes="Bold" FontSize="18" TextColor="#EBECF0" CornerRadius="20" HeightRequest="60"
+Clicked="Save_Clicked"/>
+        </StackLayout>
+
+        
+
+    </VerticalStackLayout>
+</ContentPage>

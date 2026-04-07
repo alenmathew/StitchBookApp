@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StitchBookApp.NewOrderPage"
+             Title="NewOrderPage" BackgroundColor="#FFFFFF" NavigationPage.HasNavigationBar="False">
+    
+        <Grid RowDefinitions="90*,10*" Margin="30,30,30,30" >
+
+            <StackLayout VerticalOptions="StartAndExpand" Grid.Row="0">
+            <Label TextColor="LightGray" 
+     Margin="0,20,0,0"
+ Text="New Order"
+ FontSize="40"
+ FontAttributes="Bold"
+ VerticalOptions="StartAndExpand"
+ HorizontalOptions="StartAndExpand"/>
+
+            <Label TextColor="Black"  Margin="0,15,0,0" Text="Customer Name" FontSize="16" FontAttributes="None" />
+            <Border  Margin="0,0,0,0"
+    Stroke="#2F9E9E"
+    StrokeThickness="1"
+    StrokeShape="RoundRectangle 10"
+    Padding="0"
+    BackgroundColor="Transparent">
+
+                <Entry  Margin="0,0,0,0" Background="Transparent" TextColor="#2F9E9E" BackgroundColor="LightCyan" PlaceholderColor="Gray"  FontSize="18" x:Name="CustomerName"
+Placeholder="Type Customer Name"/>
+
+            </Border>
+
+            <Label TextColor="Black"  Margin="0,15,0,0" Text="Phone Number" FontSize="16" FontAttributes="None" />
+            <Border  Margin="0,0,0,0"
+    Stroke="#2F9E9E"
+    StrokeThickness="1"
+    StrokeShape="RoundRectangle 10"
+    Padding="0"
+    BackgroundColor="Transparent">
+
+                <Entry  Margin="0,0,0,0" Background="Transparent" TextColor="#2F9E9E" BackgroundColor="LightCyan" PlaceholderColor="Gray"  FontSize="18" x:Name="PhoneNumber"
+Placeholder="Type Phone Number" Keyboard="Numeric"/>
+
+            </Border>
+
+            <Label TextColor="Black"  Margin="0,20,0,0" Text="Select Work Type" FontSize="16" FontAttributes="None" />
+            <Border  Margin="0,0,0,0"
+    Stroke="#2F9E9E"
+    StrokeThickness="1"
+    StrokeShape="RoundRectangle 10"
+    Padding="0"
+    BackgroundColor="Transparent">
+
+                <Picker  Margin="0,0,0,0" TextColor="#2F9E9E" TitleColor="Gray"  FontSize="18" Title="Select Work Type" x:Name="WorkType">
+                    <Picker.Items>
+                        <x:String>Blouse</x:String>
+                        <x:String>Churidar</x:String>
+                        <x:String>Alteration</x:String>
+                        <x:String>Other</x:String>
+                    </Picker.Items>
+                </Picker>
+
+            </Border>
+                
+            <Label TextColor="Black"  Margin="0,20,0,0" Text="Page Number" FontSize="16" FontAttributes="None" />
+            <Border   Margin="0,0,0,0"
+    Stroke="#2F9E9E"
+    StrokeThickness="1"
+    StrokeShape="RoundRectangle 10"
+    Padding="0"
+    BackgroundColor="Transparent">
+
+                <!--<Label TextColor="Gray"  Margin="30,30,0,0" Text="New Order" FontSize="24" FontAttributes="None" />-->
+
+                <Entry Margin="0,0,0,0" PlaceholderColor="Gray" TextColor="#2F9E9E" FontSize="18" x:Name="PageNumber"
+Placeholder="Type Page Number" Keyboard="Numeric"/>
+
+            </Border>
+
+            <Label TextColor="Black"  Margin="0,20,0,0" Text="Total Amount" FontSize="16" FontAttributes="None" />
+            <Border   Margin="0,0,0,0"
+    Stroke="#2F9E9E"
+    StrokeThickness="1"
+    StrokeShape="RoundRectangle 10"
+    Padding="0"
+    BackgroundColor="Transparent">
+                
+                <!--<Label TextColor="Gray"  Margin="30,30,0,0" Text="New Order" FontSize="24" FontAttributes="None" />-->
+
+                <Entry Margin="0,0,0,0" PlaceholderColor="Gray" TextColor="#2F9E9E" FontSize="18" x:Name="TotalAmount"
+Placeholder="Type Total Amount" Keyboard="Numeric"/>
+
+            </Border>
+            <Label TextColor="Black"  Margin="0,020,0,0" Text="Advance" FontSize="16" FontAttributes="None" />
+            <Border  Margin="0,0,0,0"
+    Stroke="#2F9E9E"
+    StrokeThickness="1"
+    StrokeShape="RoundRectangle 10"
+    Padding="0"
+    BackgroundColor="Transparent">
+
+                <Entry Margin="0,0,0,0"  PlaceholderColor="Grey" TextColor="#2F9E9E"  FontSize="18" x:Name="Advance"
+Placeholder="Type Advance"
+Keyboard="Numeric"/>
+
+            </Border>
+            
+
+            <Label TextColor="Black"  Margin="0,20,0,0" Text="Delivery Date" FontSize="16" FontAttributes="None" />
+            <Border  Margin="0,0,0,0"
+Stroke="#2F9E9E"
+StrokeThickness="1"
+StrokeShape="RoundRectangle 10"
+Padding="0"
+BackgroundColor="Transparent">
+
+                <DatePicker Margin="0,0,0,0"  TextColor="#2F9E9E"  FontSize="18" x:Name="DeliveryDate"/>
+
+            </Border>
+        </StackLayout>
+
+            <StackLayout Grid.Row="1" VerticalOptions="End">
+                <Button Text="Save Order"  BackgroundColor="#008080" FontAttributes="Bold" FontSize="18" TextColor="#EBECF0" CornerRadius="20" HeightRequest="60"
+        Clicked="SaveOrder_Clicked"/>
+            </StackLayout>
+
+        </Grid>
+    
+</ContentPage>
