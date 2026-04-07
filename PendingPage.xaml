@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StitchBookApp.PendingPage"
+             Title="Pending Page"  BackgroundColor="#FFFFFF" NavigationPage.HasNavigationBar="False">
+    <Grid RowDefinitions="Auto,*">
+        <Label Grid.Row="0" TextColor="LightGray" 
+    Margin="30,40,0,0"
+Text="Pending"
+FontSize="40"
+FontAttributes="Bold"
+VerticalOptions="StartAndExpand"
+HorizontalOptions="StartAndExpand"/>
+        <CollectionView  Grid.Row="1" x:Name="OrdersList" Margin="30,0,30,0" >
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+
+                    <Frame BorderColor="#2F9E9E" CornerRadius="10" Margin="0,15,0,0">
+
+                        <VerticalStackLayout>
+
+                            <Label Margin="10,0,0,0" TextColor="Black"  Text="{Binding CustomerName}"
+                       FontSize="20"
+                       FontAttributes="Bold"/>
+                            <Label  FontSize="18" Margin="10,0,0,0" TextColor="Black" Text="{Binding PhoneNumber, StringFormat='Phone No: {0}'}"/>
+                            <Label  FontSize="18" Margin="10,0,0,0" TextColor="Black" Text="{Binding PageNumber, StringFormat='Page No: {0}'}"/>
+                            <Label  FontSize="18" Margin="10,0,0,0" TextColor="Black" Text="{Binding CreatedDate, StringFormat='Added Date: {0}'}"/>
+                            <Label  FontSize="18" Margin="10,0,0,0" TextColor="Black" Text="{Binding DeliveryDate, StringFormat='Delivery Date: {0}'}"/>
+                            <Label  FontSize="18" Margin="10,0,0,0" TextColor="Black" Text="{Binding WorkType, StringFormat='WorkType: {0}'}"/>
+                            
+
+                            <Label  FontSize="18" Margin="10,0,0,0" TextColor="Black" Text="{Binding Balance,
+                       StringFormat='Balance : {0}'}"/>
+
+                            <Button Margin="0,5,0,0" BackgroundColor="#008080" FontAttributes="Bold" FontSize="18" TextColor="#EBECF0" CornerRadius="20" 
+                    Text="Mark Paid"
+                    Clicked="Pay_Clicked"/>
+
+                        </VerticalStackLayout>
+
+                    </Frame>
+
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
+    </Grid>
+
+</ContentPage>

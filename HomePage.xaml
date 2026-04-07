@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StitchBookApp.HomePage" BackgroundColor="#FFFFFF" NavigationPage.HasNavigationBar="False">
+
+    <ScrollView>
+        <VerticalStackLayout >
+            <!-- Slideshow -->
+
+            <HorizontalStackLayout>
+                <Label
+                Margin="30,60,80,30"
+            Text="StitchBook"
+            FontSize="40"
+                TextColor="LightGray"
+            FontAttributes="Bold"
+            VerticalOptions="StartAndExpand"
+            HorizontalOptions="StartAndExpand"/>
+                <ImageButton Source="backup_icon.png" Margin="30,30,0,0" Aspect="AspectFit" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand" WidthRequest="30" HeightRequest="30" Clicked="ImageButton_Clicked"></ImageButton>
+            </HorizontalStackLayout>
+
+            <CarouselView 
+            x:Name="carousel"
+            HeightRequest="200">
+
+                <CarouselView.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>banner1.png</x:String>
+                        <x:String>banner2.png</x:String>
+                        <x:String>banner3.png</x:String>
+                        <x:String>banner4.png</x:String>
+                    </x:Array>
+                </CarouselView.ItemsSource>
+
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <Image Margin="0,0,0,20"
+                        Source="{Binding}"
+                        Aspect="AspectFill"/>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+
+            </CarouselView>
+
+            <!-- Indicator dots -->
+
+            <IndicatorView Margin="0,0,0,40"
+            IndicatorColor="LightGray"
+            SelectedIndicatorColor="#2F6F95"
+            HorizontalOptions="Center"
+            IndicatorsShape="Circle"
+            IndicatorSize="10"
+            ItemsSource="{Binding Source={x:Reference carousel}, Path=ItemsSource}"
+            Position="{Binding Source={x:Reference carousel}, Path=Position}" />
+
+            <VerticalStackLayout VerticalOptions="EndAndExpand" Padding="30" Spacing="25">
+
+                <Button BackgroundColor="#008080" FontAttributes="Bold" TextColor="#EBECF0" CornerRadius="20"
+        Text="New Order"
+        FontSize="22"
+        HeightRequest="60"
+        Clicked="NewOrder_Clicked"/>
+
+                <Button BackgroundColor="#008080" FontAttributes="Bold" TextColor="#EBECF0" CornerRadius="20"
+Text="Search Customer"
+FontSize="22"
+HeightRequest="60"
+Clicked="SearchCustomer_Clicked"/>
+
+                <Button BackgroundColor="#008080" FontAttributes="Bold" TextColor="#EBECF0" CornerRadius="20"
+        Text="Pending Payments"
+        FontSize="22"
+        HeightRequest="60"
+        Clicked="Pending_Clicked"/>
+
+            <Button BackgroundColor="#008080" FontAttributes="Bold" TextColor="#EBECF0" CornerRadius="20"
+        Text="Summary"
+        FontSize="22"
+        HeightRequest="60"
+        Clicked="Summary_Clicked"/>
+                <Button BackgroundColor="#008080" FontAttributes="Bold" TextColor="#EBECF0" CornerRadius="20"
+Text="Today's Deliveries"
+FontSize="22"
+HeightRequest="60"
+Clicked="Deliveries_Clicked"/>
+                <Button BackgroundColor="#008080" FontAttributes="Bold" TextColor="#EBECF0" CornerRadius="20"
+Text="Add Expenses"
+FontSize="22"
+HeightRequest="60"
+Clicked="AddExpense_Clicked"/>
+
+            </VerticalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
